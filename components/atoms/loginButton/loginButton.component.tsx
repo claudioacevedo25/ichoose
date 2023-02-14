@@ -1,18 +1,12 @@
+import { Button, Link } from '@nextui-org/react'
 import { useSession, signIn, signOut } from 'next-auth/react'
 export const LoginButton = () => {
   const { data: session } = useSession()
-  if (session) {
-    return (
-      <>
-        Signed in as {session?.user?.email} <br />
-        <button onClick={() => signOut()}>Sign out</button>
-      </>
-    )
-  }
+  const handleSession = () => (session ? signOut() : signIn())
+  const text = session ? 'Sign Out' : 'Sign In'
   return (
-    <>
-      Not signed in <br />
-      <button onClick={() => signIn()}>Sign in</button>
-    </>
+    <Button auto flat as={Link} onClick={handleSession}>
+      {text}
+    </Button>
   )
 }

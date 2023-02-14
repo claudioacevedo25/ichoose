@@ -1,4 +1,6 @@
 import { useSession } from 'next-auth/react'
+import { Header } from '../header'
+
 type Props = {
   children: React.ReactNode
 }
@@ -7,7 +9,7 @@ export const Layout = ({ children }: Props) => {
   if (status === 'loading') return <div>CArgando SEssion</div>
   return (
     <>
-      <div>HEADER</div>
+      <Header />
       <main>{children}</main>
       <div>footer</div>
     </>
