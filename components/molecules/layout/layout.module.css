@@ -3,5 +3,11 @@
   flex-direction: column;
   justify-content: flex-end;
   min-height: 90vh;
-  padding: 6rem;
+  padding: 1.5rem;
+}
+
+@media (min-width: 700px) {
+  .container {
+    padding: 6rem;
+  }
 }
