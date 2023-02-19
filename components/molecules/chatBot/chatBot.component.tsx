@@ -5,11 +5,15 @@ import { UserAvatar } from '@/components/atoms/avatar'
 import { OPEN_AI } from '@/constants/openai'
 import styles from './chatBot.module.css'
 
+type Models = 'text-ada-001' | 'text-babbage-001' | 'text-curie-001' | 'text-davinci-003'
+
 type StateProps = {
   id: string
   request: string
   response: string
 }
+
+const model: Models = 'text-ada-001'
 
 export const ChatbotApp = () => {
   const [apiResponse, setApiResponse] = useState<StateProps[]>([])
@@ -21,7 +25,7 @@ export const ChatbotApp = () => {
 
     try {
       const result = await OPEN_AI.createCompletion({
-        model: 'text-davinci-003',
+        model,
         prompt: query,
         temperature: 0.3,
         max_tokens: 4000
