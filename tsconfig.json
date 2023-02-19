@@ -20,6 +20,13 @@
     },
     "allowSyntheticDefaultImports": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "firestore/admin.js", "firestore/client.js"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "firestore/admin.js",
+    "firestore/client.js",
+    "components/atoms/avatar/avatar.component.tsx"
+  ],
   "exclude": ["node_modules"]
 }

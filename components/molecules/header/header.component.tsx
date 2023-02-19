@@ -1,18 +1,7 @@
 import { UserAvatar } from '@/components/atoms/avatar'
 import { LoginButton } from '@/components/atoms/loginButton'
-import { Navbar, Button, Link, Text } from '@nextui-org/react'
-
-const collapseItems = [
-  'Features',
-  'Customers',
-  'Pricing',
-  'Company',
-  'Legal',
-  'Team',
-  'Help & Feedback',
-  'Login',
-  'Sign Up'
-]
+import { PAGES } from '@/constants/pages'
+import { Navbar, Link, Text } from '@nextui-org/react'
 
 export const Header = () => {
   return (
@@ -35,15 +24,15 @@ export const Header = () => {
         </Navbar.Item>
       </Navbar.Content>
       <Navbar.Collapse>
-        {collapseItems.map((item) => (
-          <Navbar.CollapseItem key={item}>
+        {PAGES.map(({ id, name, url }) => (
+          <Navbar.CollapseItem key={id}>
             <Link
               color="inherit"
               css={{
                 minWidth: '100%'
               }}
-              href="#">
-              {item}
+              href={url}>
+              {name}
             </Link>
           </Navbar.CollapseItem>
         ))}
