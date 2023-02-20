@@ -2,18 +2,22 @@ import { UserAvatar } from '@/components/atoms/avatar'
 import { LoginButton } from '@/components/atoms/loginButton'
 import { PAGES } from '@/constants/pages'
 import { Navbar, Link, Text } from '@nextui-org/react'
-
 export const Header = () => {
   return (
     <Navbar isBordered variant="floating">
       <Navbar.Brand>
-        <Navbar.Toggle aria-label="toggle navigation" />
+        <Navbar.Toggle aria-label="toggle navigation" showIn="xs" />
         <Text b color="inherit" hideIn="xs">
           IChoose
         </Text>
       </Navbar.Brand>
-      <Navbar.Content enableCursorHighlight hideIn="xs" variant="underline">
-        <Navbar.Link href="#"></Navbar.Link>
+      <Navbar.Content
+        enableCursorHighlight
+        hideIn="xs"
+        variant="highlight-solid"
+        activeColor="primary">
+        <Navbar.Link href="/question-answer">Q & A</Navbar.Link>
+        <Navbar.Link href="/">My Preferences</Navbar.Link>
       </Navbar.Content>
       <Navbar.Content>
         <Navbar.Item>

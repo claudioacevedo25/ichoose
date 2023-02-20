@@ -28,7 +28,6 @@ export const GptInput = ({ isLoading, handleSubmit }: Props) => {
       />
       <Button
         auto
-        flat
         disabled={isLoading}
         type="submit"
         color="gradient"

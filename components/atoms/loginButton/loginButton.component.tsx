@@ -5,7 +5,7 @@ export const LoginButton = () => {
   const handleSession = () => (session ? signOut() : signIn())
   const text = session ? 'Sign Out' : 'Sign In'
   return (
-    <Button auto flat as={Link} onClick={handleSession} color="gradient">
+    <Button auto as={Link} onClick={handleSession} color="gradient">
       {text}
     </Button>
   )

@@ -9,13 +9,12 @@
 .request {
   background-color: rgba(52, 53, 65, 0.3);
   border-radius: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .request,
 .response {
   display: flex;
-  align-items: center;
   gap: 1rem;
 }
 .request > div,
