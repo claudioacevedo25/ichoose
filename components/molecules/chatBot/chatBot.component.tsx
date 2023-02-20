@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 import { GptInput } from '@/components/atoms/gptInput'
 import { UserAvatar } from '@/components/atoms/avatar'
-import { OPEN_AI } from '@/constants/openai'
+import { OPEN_AI } from '@/openai/client'
 import styles from './chatBot.module.css'
 
 type Models = 'text-ada-001' | 'text-babbage-001' | 'text-curie-001' | 'text-davinci-003'
