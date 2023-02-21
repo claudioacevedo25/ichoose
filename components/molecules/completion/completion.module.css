@@ -1,0 +1,23 @@
+.list {
+  margin: 0;
+}
+
+.question__answer {
+  padding: 1rem 0;
+}
+
+.request {
+  background-color: rgba(52, 53, 65, 0.3);
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.request,
+.response {
+  display: flex;
+  gap: 1rem;
+}
+.request > div,
+.response > div {
+  width: fit-content;
+}
