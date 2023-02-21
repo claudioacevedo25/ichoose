@@ -2,6 +2,7 @@ import { useRef } from 'react'
 import { Button, Loading } from '@nextui-org/react'
 import styles from './gptInput.module.css'
 import { SendIcon } from '../sendIcon'
+import { Skeleton } from '../skeleton'
 
 type Props = {
   isLoading: boolean
@@ -20,12 +21,16 @@ export const GptInput = ({ isLoading, handleSubmit }: Props) => {
 
   return (
     <form onSubmit={onSubmit} className={styles.container}>
-      <textarea
-        placeholder="Please ask me anything..."
-        ref={inputRef}
-        autoFocus
-        className={styles.form__textarea}
-      />
+      {isLoading ? (
+        <Skeleton />
+      ) : (
+        <textarea
+          placeholder="Please ask me anything..."
+          ref={inputRef}
+          autoFocus
+          className={styles.form__textarea}
+        />
+      )}
       <Button
         auto
         disabled={isLoading}
