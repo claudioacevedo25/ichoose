@@ -1,4 +1,4 @@
-import { Button, Loading } from '@nextui-org/react'
+import { Button, Loading, Text } from '@nextui-org/react'
 import styles from './recommendButton.module.css'
 
 type Props = {
@@ -10,11 +10,11 @@ type Props = {
 export const RecommendButton = ({ showButton, isLoading, handleUserPreferences }: Props) => {
   if (!showButton) return null
   return (
-    <Button onClick={handleUserPreferences} color="gradient" size="lg" className={styles.container}>
+    <Button onClick={handleUserPreferences} color="gradient" auto className={styles.container}>
       {isLoading ? (
         <Loading type="points" color="currentColor" size="sm" />
       ) : (
-        'Recommend to me, something about my likes'
+        <Text>Show me my preferences</Text>
       )}
     </Button>
   )
