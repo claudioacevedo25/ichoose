@@ -11,11 +11,7 @@ export const Header = () => {
           IChoose
         </Text>
       </Navbar.Brand>
-      <Navbar.Content
-        enableCursorHighlight
-        hideIn="xs"
-        variant="highlight-solid"
-        activeColor="primary">
+      <Navbar.Content enableCursorHighlight hideIn="xs" variant="underline-rounded">
         <Navbar.Link href="/question-answer">Q & A</Navbar.Link>
         <Navbar.Link href="/">My Preferences</Navbar.Link>
       </Navbar.Content>

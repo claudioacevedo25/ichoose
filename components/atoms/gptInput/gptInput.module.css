@@ -3,6 +3,7 @@
   flex-direction: column;
   gap: 2rem;
   padding: 2rem 0;
+  width: 100%;
 }
 
 .form__textarea {
@@ -18,6 +19,7 @@
   .container {
     flex-direction: row;
     align-items: center;
+    width: fit-content;
   }
 
   .form__textarea {

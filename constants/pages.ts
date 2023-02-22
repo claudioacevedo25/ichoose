@@ -7,7 +7,7 @@ const PAGES = [
   {
     id: 2,
     name: 'My Preferences',
-    url: '/my-preferences'
+    url: '/'
   }
 ]
 
